@@ -1,0 +1,45 @@
+<plugin name='ncs-people' version='0.1' grailsVersion='1.3.3 &gt; *'>
+  <author>Aaron J. Zirbes</author>
+  <authorEmail>ajz@umn.edu</authorEmail>
+  <title>Contact Point Structure</title>
+  <description>\
+Case Management - Contact Point Structure
+</description>
+  <documentation>http://grails.org/plugin/ncs-people</documentation>
+  <resources>
+    <resource>BuildConfig</resource>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>UrlMappings</resource>
+    <resource>edu.umn.ncs.AddressType</resource>
+    <resource>edu.umn.ncs.Comment</resource>
+    <resource>edu.umn.ncs.CommentPerson</resource>
+    <resource>edu.umn.ncs.CommentPersonContact</resource>
+    <resource>edu.umn.ncs.ContactRole</resource>
+    <resource>edu.umn.ncs.ContactRoleType</resource>
+    <resource>edu.umn.ncs.Country</resource>
+    <resource>edu.umn.ncs.DwellingUnit</resource>
+    <resource>edu.umn.ncs.EmailAddress</resource>
+    <resource>edu.umn.ncs.EmailType</resource>
+    <resource>edu.umn.ncs.EnrollmentType</resource>
+    <resource>edu.umn.ncs.Ethnicity</resource>
+    <resource>edu.umn.ncs.Gender</resource>
+    <resource>edu.umn.ncs.Household</resource>
+    <resource>edu.umn.ncs.LastName</resource>
+    <resource>edu.umn.ncs.Person</resource>
+    <resource>edu.umn.ncs.PersonAddress</resource>
+    <resource>edu.umn.ncs.PersonContact</resource>
+    <resource>edu.umn.ncs.PersonEmail</resource>
+    <resource>edu.umn.ncs.PersonPhone</resource>
+    <resource>edu.umn.ncs.PersonRelationship</resource>
+    <resource>edu.umn.ncs.PhoneNumber</resource>
+    <resource>edu.umn.ncs.PhoneType</resource>
+    <resource>edu.umn.ncs.RelationshipType</resource>
+    <resource>edu.umn.ncs.Source</resource>
+    <resource>edu.umn.ncs.StreetAddress</resource>
+    <resource>edu.umn.ncs.Study</resource>
+    <resource>edu.umn.ncs.Subject</resource>
+  </resources>
+  <dependencies />
+  <behavior />
+</plugin>
