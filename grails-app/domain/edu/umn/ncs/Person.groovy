@@ -46,15 +46,12 @@ class Person implements Serializable {
         streetAddresses.find{ it.preferredOrder == 1 }?.streetAddress
     }
 
-    StreetAddress getBestAddress() {
-        // assuming address order # 1 is the primary..
-        // this is a big assumtion.  (It assumes all the software is behaving)
-
+    PersonAddress getBestAddress() {
         // let's find all the active addresses, and if they are seasonal,
         // they need to be active within their seasonal range
-        def validAddresses = streetAddresses.find{ it.isActive() && it.isSeasonalActive()}
-        .sort(! it.isSeasonal(), it.preferredOrder )  // then we sort it, by seasonal
-
+        def validAddresses = streetAddresses.findAll{ it.isActive() && it.isSeasonalActive()}
+			.sort{ it.preferredOrder }  // then we sort it, by seasonal
+			.sort{! it.isSeasonal() }  // then we sort it, by preferred order
 
         if (validAddresses) {
             return validAddresses[0]
@@ -64,22 +61,24 @@ class Person implements Serializable {
 
     }
 
-    PhoneNumber getPrimaryPhone() {
-        def validPhone = phoneNumbers.find{it.isActive() && it.isSeasonalActive()}
-        .sort(! it.isSeasonal(), it.preferredOrder )
+    PersonPhone getPrimaryPhone() {
+        def validPhone = phoneNumbers.findAll{it.isActive() && it.isSeasonalActive()}
+			.sort{ it.preferredOrder }  // then we sort it, by seasonal
+			.sort{! it.isSeasonal() }  // then we sort it, by preferred order
 
         if (validPhone) {
-            return validPhone[0]
-        } else return null
+            return validPhone[0] 
+        } else { return null }
     }
 
-    PhoneNumber getPrimaryEmail() {
-        def validEmail = emailAddresses.find{it.isActive() && it.isSeasonalActive()}
-        .sort(! it.isSeasonal(), it.preferredOrder )
+    PersonEmail getPrimaryEmail() {
+        def validEmail = emailAddresses.findAll{it.isActive() && it.isSeasonalActive()}
+			.sort{ it.preferredOrder }  // then we sort it, by seasonal
+			.sort{! it.isSeasonal() }  // then we sort it, by preferred order
 
         if (validEmail) {
             return validEmail[0]
-        } else return null
+        } else { return null }
     }
 
     String getFullName() {
