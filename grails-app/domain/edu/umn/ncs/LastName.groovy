@@ -1,7 +1,15 @@
 package edu.umn.ncs
 
+/**
+This domain class is used to track any alternate last names
+that anyone may have.
+*/
 class LastName implements Serializable {
 
+	/**
+	This is the actual last name.
+	Maximum length is 30 characters.
+	*/
 	String		lastName
 	boolean		isMaiden
 	boolean		isFiction
