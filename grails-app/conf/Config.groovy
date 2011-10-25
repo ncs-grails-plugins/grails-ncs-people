@@ -8,3 +8,5 @@ grails.doc.copyright = "Copyright (c) Regeants of the University of Minnesota, 2
 // grails.doc.footer - The footer to use
 grails.doc.footer = "https://www.healthstudies.umn.edu/ | http://nationalchildrensstudy.gov/"
 
+grails.views.default.codec="none" // none, html, base64
+grails.views.gsp.encoding="UTF-8"
