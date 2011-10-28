@@ -352,4 +352,8 @@ class Person implements Serializable {
         userUpdated(nullable:true)
         // END PROVENANCE FIELDS
     }
+
+	static mapping = {
+		sort lastName:'asc', firstName:'asc', middleName:'asc'
+	}
 }

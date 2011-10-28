@@ -7,9 +7,9 @@ that are associated with a StreetAddress instance.
 class AddressType implements Serializable {
 
 	/**
-	<p>The textual representation of the AddressType instance:
-	for example "home", "work", "cabin", etc...</p>
-	<p>The maximum length for this string is 16 characters.</p>
+	The textual representation of the AddressType instance:
+	for example "home", "work", "cabin", etc...
+	The maximum length for this string is 16 characters.
 	*/
 	String name
 	

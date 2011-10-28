@@ -39,15 +39,13 @@ class Comment implements Serializable {
 	This contains any constraints for the domain class.
 	Non-default constraints for this class are <ul>
 		<li>the text attribute can be no longer than 4000 characters</li>
-		<li>the userCreated attribute can be no longer than 16 characters</li>
-		<li>the appCreated attribute can be no longer than 50 characters</li>
 	</ul>
 	*/
     static constraints = {
     	text(maxSize:4000)
 		dateCreated()
-		userCreated(maxSize:16)
-		appCreated(maxSize:50)
+		userCreated()
+		appCreated()
     }
 
 	/**
