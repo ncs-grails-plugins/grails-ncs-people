@@ -48,6 +48,9 @@ class Subject implements Serializable {
 	*/
 	EnrollmentType enrollment // (control, intervention, high, low, etc...)
 
+	/** This option provides the subject to be enrolled in sevaral sub-groups */
+	static hasMany = [ subEnrollments : EnrollmentType ]
+
 	// BEGIN PROVENANCE FIELDS
 	/**
 	This field is automatically assigned the date that this particular ContactRole instance was created

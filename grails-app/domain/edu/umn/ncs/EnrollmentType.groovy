@@ -12,6 +12,13 @@ class EnrollmentType implements Serializable {
 	*/
 	String name
 
+	/** This flags whether or not this enrollment type is 
+	a sub enrollment or not.  Sub enrollments are often associated
+	with sub-studies, or study flags that change the way a subject
+	is dealth with in regards to study protocol
+	*/
+	Boolean subEnrollment = false
+
 	/**
 	This is the method that is the default converter of this class to a string.
 	This toString() method just returns the contents of the 'name' attribute
@@ -26,5 +33,6 @@ class EnrollmentType implements Serializable {
 	*/
     static constraints = {
     	name(maxSize:16)
+		subEnrollment(nullable:true)
 	}
 }
