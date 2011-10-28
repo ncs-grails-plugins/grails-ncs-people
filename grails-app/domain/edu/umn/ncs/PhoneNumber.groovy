@@ -60,7 +60,7 @@ class PhoneNumber implements Serializable {
 	for output as a string.
 	*/
     String getPrettyPhone() {
-		strip all non-numeric characters out
+		// strip all non-numeric characters out
         def phone = phoneNumber.replaceAll(/[)(.-]/, '')
 
             if ( phone.size() == 10) {
@@ -77,7 +77,7 @@ class PhoneNumber implements Serializable {
                 phone =  phone.substring(0,2) + "-" + phone.substring(2)
             }
 
-		if (extension) { phone + ' x' + extension }
+		if (extension) { phone = phone + ' x' + extension }
         return phone
     }
 
@@ -109,7 +109,7 @@ class PhoneNumber implements Serializable {
         // END PROVENANCE FIELDS
     }
 
-	static mapping {
+	static mapping = {
 		sort 'phoneNumber'
 	}
 }

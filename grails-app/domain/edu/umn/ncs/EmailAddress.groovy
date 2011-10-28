@@ -11,7 +11,7 @@ domain class.
 class EmailAddress implements Serializable {
 
 	/**
-	This is the actuall email address that this domain class is tied to.
+	This is the actual email address that this domain class is tied to.
 	*/
 	String		emailAddress
 
@@ -51,9 +51,9 @@ class EmailAddress implements Serializable {
 	// END PROVENANCE FIELDS
 	
 	/**
-	This contains any constraints for this domain class.
-	Non-default constraints for this class are <ul>
-		<li>emailAddress must be a valid email address according to RFC 2822, http://tools.ietf.org/html/rfc2822</li>
+	 This contains any constraints for this domain class.
+	 Non-default constraints for this class are <ul>
+	 	<li>emailAddress must be a valid email address according to <a href="http://tools.ietf.org/html/rfc2822">RFC 2822</a>.</li>
 		<li>verifiedDate is nullable (optional)</li>
 		<li>bounceDate is nullable (optional)</li>
 		<li>lastUpdated is nullable (optional)</li>
