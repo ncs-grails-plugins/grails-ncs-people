@@ -8,7 +8,6 @@ Case Management - Contact Point Structure
   <documentation>http://grails.org/plugin/ncs-people</documentation>
   <resources>
     <resource>Config</resource>
-    <resource>UrlMappings</resource>
     <resource>edu.umn.ncs.AddressType</resource>
     <resource>edu.umn.ncs.Comment</resource>
     <resource>edu.umn.ncs.CommentPerson</resource>

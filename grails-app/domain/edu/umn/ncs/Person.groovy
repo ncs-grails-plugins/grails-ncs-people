@@ -66,6 +66,8 @@ class Person implements Serializable {
 	please set this to false. */
 	Boolean		deathDateYearKnown = true
 
+	static belongsTo = Household
+
 	/** The gender, or sex of the person.
 	If unknown, set to null */
     Gender		gender
