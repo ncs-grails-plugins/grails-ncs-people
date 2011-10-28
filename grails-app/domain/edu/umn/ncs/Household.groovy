@@ -23,7 +23,10 @@ class Household implements Serializable {
     static belongsTo = [ dwelling: DwellingUnit ]
 
 	/**
+	This static hasMany map contains the foreign key references.
 	A household may have many people records associated with it.
+	the people attribute is a collection of edu.umn.ncs.Person 
+	objects.
 	*/
     static hasMany = [ people: Person ]
 	
