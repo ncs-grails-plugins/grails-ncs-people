@@ -301,7 +301,7 @@ class Person implements Serializable {
 			}
 
 			// save full name
-			this.name = this.fullName()
+			this.name = this.fullName
 		}
 	}
 
@@ -315,7 +315,7 @@ class Person implements Serializable {
 		if ( this.deathDate ) { this.alive = false }
 
 		// save full name
-		this.name = this.fullName()
+		this.name = this.fullName
 	}
 
 	/**
