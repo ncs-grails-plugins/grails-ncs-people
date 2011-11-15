@@ -306,6 +306,19 @@ class Person implements Serializable {
 	}
 
 	/**
+	This is the before insert trigger for this class, and it will make sure
+	that the 'alive' and 'name' name fields are updated appropriately when
+	the domain class instance changes.
+	*/
+	def beforeInsert() {
+		// update alive to dead if necessary
+		if ( this.deathDate ) { this.alive = false }
+
+		// save full name
+		this.name = this.fullName()
+	}
+
+	/**
 	These are the GORM constraints applied to this domain class.
 	Non-default constraints are as follows:
 	<dl>
@@ -339,6 +352,7 @@ class Person implements Serializable {
         middleName(nullable:true, maxSize:20)
         lastName(maxSize:30)
         suffix(nullable:true, maxSize:10)
+		name(nullable:true, visible:false)
         birthDate(nullable:true)
         deathDate(nullable:true)
         gender(nullable:true)
