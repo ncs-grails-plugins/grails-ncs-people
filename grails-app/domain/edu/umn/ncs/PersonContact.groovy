@@ -284,7 +284,7 @@ class PersonContact implements Serializable {
 	/**
 	This contains any constraints for this domain class.
 	Non-default constraints for this class are <ul>
-		<li>proxyContactID is nullable (optional)</li>
+		<li>proxyContact is nullable (optional)</li>
 		<li>endDate is nullable (optional)</li>
 		<li>lastUpdated is nullable (optional)</li>
 		<li>userUpaded is nullable (optional)</li>
@@ -297,7 +297,7 @@ class PersonContact implements Serializable {
 	</ul>
 	*/
     static constraints = {
-        proxyContactID(nullable:true)
+        proxyContact(nullable:true)
         startDate()
         endDate(nullable:true)
         okToUse()

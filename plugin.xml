@@ -1,4 +1,4 @@
-<plugin name='ncs-people' version='0.7' grailsVersion='1.3.7 &gt; *'>
+<plugin name='ncs-people' version='0.8' grailsVersion='1.3.7 &gt; *'>
   <author>Aaron J. Zirbes</author>
   <authorEmail>ajz@umn.edu</authorEmail>
   <title>Contact Point Structure</title>
