@@ -2,6 +2,14 @@ grails.project.class.dir = "target/classes"
 grails.project.test.class.dir = "target/test-classes"
 grails.project.test.reports.dir = "target/test-reports"
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+
+// Plugin Publishing Repository Information
+grails.project.repos.umnNcs.url = "http://artifact.ncs.umn.edu/plugins-release-local"
+grails.project.repos.umnNcs.type = "maven"
+grails.project.repos.default = "umnNcs"
+grails.release.scm.enabled = false
+
+// Dependency Resolution
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
@@ -19,10 +27,7 @@ grails.project.dependency.resolution = {
         // from public Maven repositories
         //mavenLocal()
         mavenCentral()
-        //mavenRepo "http://snapshots.repository.codehaus.org"
-        //mavenRepo "http://repository.codehaus.org"
-        //mavenRepo "http://download.java.net/maven/2/"
-        //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo "http://artifact.ncs.umn.edu/plugins-release"
     }
     dependencies {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes eg.

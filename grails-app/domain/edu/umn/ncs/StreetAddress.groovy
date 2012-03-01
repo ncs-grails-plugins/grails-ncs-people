@@ -147,7 +147,7 @@ class StreetAddress implements Serializable {
 	</dl>
 	*/
     static constraints = {
-        address(maxSize:64, unique: ['address2', 'country', 'city','state','zipCode'] )
+        address(maxSize:64)
         address2(nullable: true, maxSize:64)
         city(nullable: true, maxSize:30)
         state(nullable: true, maxSize:2)
