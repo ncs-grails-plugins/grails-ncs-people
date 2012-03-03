@@ -8,7 +8,7 @@ class NcsPeopleGrailsPlugin {
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
             "grails-app/views/error.gsp",
-			"grails-app/conf/Config.groovy",
+			"grails-app/conf/*",
 			"lib/"
     ]
 
